@@ -19,7 +19,6 @@
   "homepage": "https://github.com/toschivictor/instagram-bot#readme",
   "dependencies": {
     "chromedriver": "^83.0.0",
-    "instagram-web-api": "^2.2.0",
     "selenium-webdriver": "^4.0.0-alpha.7"
   },
   "devDependencies": {
@@ -29,7 +28,6 @@
     "@babel/preset-env": "^7.10.2",
     "babel-polyfill": "^6.26.0",
     "dotenv": "^8.2.0",
-    "esm": "^3.2.25",
     "prettier": "^2.0.5"
   }
 }
