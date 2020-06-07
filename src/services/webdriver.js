@@ -1,14 +1,7 @@
-require('chromedriver');
+import('chromedriver');
+import { Builder } from 'selenium-webdriver';
 
-const { Builder, By, Key, until } = require('selenium-webdriver');
-
-export async function init() {
-  let driver = await new Builder().forBrowser('chrome').build();
-  try {
-    await driver.get('http://www.google.com/ncr');
-    await driver.findElement(By.name('q')).sendKeys('webdriver', Key.RETURN);
-    await driver.wait(until.titleIs('webdriver - Google Search'), 1000);
-  } finally {
-    await driver.quit();
-  }
-}
+export const initiateDriver = async () => {
+  const driver = await new Builder().forBrowser('chrome').build();
+  return driver;
+};
