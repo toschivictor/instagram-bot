@@ -1,0 +1,35 @@
+{
+  "name": "instagram-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel ./src -d build && node ./build/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toschivictor/instagram-bot.git"
+  },
+  "author": "Victor Toschi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toschivictor/instagram-bot/issues"
+  },
+  "homepage": "https://github.com/toschivictor/instagram-bot#readme",
+  "dependencies": {
+    "chromedriver": "^83.0.0",
+    "instagram-web-api": "^2.2.0",
+    "selenium-webdriver": "^4.0.0-alpha.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.1",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "babel-polyfill": "^6.26.0",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "prettier": "^2.0.5"
+  }
+}
