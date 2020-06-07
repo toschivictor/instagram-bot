@@ -12,8 +12,7 @@ import { hashtags } from './services/utilities';
     await likeMedia(driver, hashtag);
   } catch (error) {
     console.log('Error on login:', error);
-    await driver.quit();
-
-    start();
   }
+
+  await driver.quit();
 })();

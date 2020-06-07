@@ -24,12 +24,14 @@ export const likeMedia = async (driver, hashtag) => {
   likeNextMedia(driver);
 };
 
-const likeNextMedia = async (driver, maxTries = 0) => {
-  if (maxTries < 15) {
+const likeNextMedia = async (driver, currentTry = 1) => {
+  console.log('Image number:', currentTry);
+
+  if (currentTry < 15) {
     await driver.findElement(By.css('svg[aria-label="Like"]')).click();
     await driver.sleep(500);
     await driver.findElement(By.css('.coreSpriteRightPaginationArrow')).click();
     await driver.sleep(2000);
-    return likeNextMedia(driver, maxTries++);
+    return likeNextMedia(driver, currentTry + 1);
   }
 };
