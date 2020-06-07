@@ -13,6 +13,4 @@ import { hashtags } from './services/utilities';
   } catch (error) {
     console.log('Error on login:', error);
   }
-
-  await driver.quit();
 })();

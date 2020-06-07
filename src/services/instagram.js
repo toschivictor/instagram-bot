@@ -38,7 +38,7 @@ export const likeMedia = async (driver, hashtag) => {
 const likeNextMedia = async (driver, currentTry = 1) => {
   console.log('Image number:', currentTry);
 
-  if (currentTry < 15) {
+  if (currentTry < 25) {
     try {
       await driver.findElement(By.css('svg[aria-label="Like"]')).click();
       await driver.sleep(500);
@@ -50,5 +50,7 @@ const likeNextMedia = async (driver, currentTry = 1) => {
     } catch (error) {
       console.log('likeNextMedia:', error);
     }
+  } else {
+    await driver.quit();
   }
 };
