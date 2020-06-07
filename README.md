@@ -1,3 +1,3 @@
-# IG like generator
+# IG bot
 
-Instagram bot that interacts with pictures, built in Node.JS.
+Instagram bot that interacts with pictures. Built in Node.JS.
