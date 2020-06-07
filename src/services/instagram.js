@@ -49,6 +49,7 @@ const likeNextMedia = async (driver, currentTry = 1) => {
       return likeNextMedia(driver, currentTry + 1);
     } catch (error) {
       console.log('likeNextMedia:', error);
+      await driver.quit();
     }
   } else {
     await driver.quit();
